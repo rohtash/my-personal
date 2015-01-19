@@ -20,49 +20,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link android.support.v4.app.Fragment} subclass.
- */
 public class NavigationDrawerFragment extends Fragment {
 
-    /*
-    STEPS TO HANDLE THE RECYCLER CLICK
-
-    1 Create a class that EXTENDS RecylcerView.OnItemTouchListener
-
-    2 Create an interface inside that class that supports click and long click and indicates the View that was clicked and the position where it was clicked
-
-    3 Create a GestureDetector to detect ACTION_UP single tap and Long Press events
-
-    4 Return true from the singleTap to indicate your GestureDetector has consumed the event.
-
-    5 Find the childView containing the coordinates specified by the MotionEvent and if the childView is not null and the listener is not null either, fire a long click event
-
-    6 Use the onInterceptTouchEvent of your RecyclerView to check if the childView is not null, the listener is not null and the gesture detector consumed the touch event
-
-    7 if above condition holds true, fire the click event
-
-    8 return false from the onInterceptedTouchEvent to give a chance to the childViews of the RecyclerView to process touch events if any.
-
-    9 Add the onItemTouchListener object for our RecyclerView that uses our class created in step 1
-     */
     public static final String PREF_FILE_NAME = "testpref";
     public static final String KEY_USER_LEARNED_DRAWER = "user_learned_drawer";
     private RecyclerView recyclerView;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
-    private VivzAdapter adapter;
+    private MyAdapter adapter;
     private boolean mUserLearnedDrawer;
     private boolean mFromSavedInstanceState;
     private View containerView;
     private boolean isDrawerOpened = false;
 
     public NavigationDrawerFragment() {
-        // Required empty public constructor
     }
 
     public static List<Information> getData() {
-        //load only static data inside a drawer
         List<Information> data = new ArrayList<>();
         int[] icons = {R.drawable.ic_number1, R.drawable.ic_number2, R.drawable.ic_number3, R.drawable.ic_number4};
         String[] titles = {"Vivz", "Anky", "Slidenerd", "YouTube"};
@@ -103,7 +77,7 @@ public class NavigationDrawerFragment extends Fragment {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
-        adapter = new VivzAdapter(getActivity(), getData());
+        adapter = new MyAdapter(getActivity(), getData());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getActivity(), recyclerView,new ClickListener() {

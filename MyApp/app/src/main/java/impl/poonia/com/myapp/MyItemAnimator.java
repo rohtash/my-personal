@@ -10,10 +10,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Windows on 13-01-5.
- */
-public class DefaultItemAnimator extends RecyclerView.ItemAnimator {
+public class MyItemAnimator extends RecyclerView.ItemAnimator {
     private static final boolean DEBUG = false;
 
     private ArrayList<ViewHolder> mPendingRemovals = new ArrayList<ViewHolder>();
@@ -565,7 +562,7 @@ public class DefaultItemAnimator extends RecyclerView.ItemAnimator {
             this.fromY = fromY;
             this.toX = toX;
             this.toY = toY;
-            L.m("MOVEINFO "+holder+" from X "+fromX+" to X "+toX+" from Y "+fromY+" to Y "+toY);
+            MyMsg.m("MOVEINFO " + holder + " from X " + fromX + " to X " + toX + " from Y " + fromY + " to Y " + toY);
         }
     }
 
@@ -576,7 +573,7 @@ public class DefaultItemAnimator extends RecyclerView.ItemAnimator {
         private ChangeInfo(ViewHolder oldHolder, ViewHolder newHolder) {
             this.oldHolder = oldHolder;
             this.newHolder = newHolder;
-            L.m("CHANGEINFO "+" old "+oldHolder+" new "+newHolder);
+            MyMsg.m("CHANGEINFO " + " old " + oldHolder + " new " + newHolder);
         }
 
         private ChangeInfo(ViewHolder oldHolder, ViewHolder newHolder,
@@ -586,7 +583,7 @@ public class DefaultItemAnimator extends RecyclerView.ItemAnimator {
             this.fromY = fromY;
             this.toX = toX;
             this.toY = toY;
-            L.m("CHANGEINFO "+" old "+oldHolder+" new "+newHolder+" from X "+fromX+" to X "+toX+" from Y "+fromY+" to Y "+toY);
+            MyMsg.m("CHANGEINFO " + " old " + oldHolder + " new " + newHolder + " from X " + fromX + " to X " + toX + " from Y " + fromY + " to Y " + toY);
         }
 
         @Override

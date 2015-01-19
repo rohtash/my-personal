@@ -11,14 +11,12 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by Windows on 22-12-2014.
- */
-public class VivzAdapter extends RecyclerView.Adapter<VivzAdapter.MyViewHolder> {
+
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     List<Information> data= Collections.emptyList();
     private LayoutInflater inflater;
     private Context context;
-    public VivzAdapter(Context context, List<Information> data){
+    public MyAdapter(Context context, List<Information> data){
         this.context=context;
         inflater=LayoutInflater.from(context);
         this.data=data;

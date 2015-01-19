@@ -7,11 +7,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
-/**
- * Created by Windows on 07-01-2015.
- */
 public class MyView extends TextView {
-    public static final String TAG="VIVZ";
+    public static final String TAG="MY";
     Paint paint;
     public MyView(Context context) {
         super(context);

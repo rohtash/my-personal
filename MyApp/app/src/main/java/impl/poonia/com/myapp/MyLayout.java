@@ -9,11 +9,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.FrameLayout;
 
-/**
- * Created by Windows on 07-01-2015.
- */
 public class MyLayout extends FrameLayout {
-    public static final String TAG="VIVZ";
+    public static final String TAG="MY";
     Paint paint=null;
     public MyLayout(Context context) {
         super(context);

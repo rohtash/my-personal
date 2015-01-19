@@ -5,8 +5,8 @@ import android.util.Log;
 /**
  * Created by Windows on 13-01-2015.
  */
-public class L {
+public class MyMsg {
     public static void m(String message){
-        Log.d("VIVZ",""+message);
+        Log.d("My msg",""+message);
     }
 }
