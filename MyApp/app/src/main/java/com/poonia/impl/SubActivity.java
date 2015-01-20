@@ -1,4 +1,4 @@
-package impl.poonia.com.myapp;
+package com.poonia.impl;
 
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+
+import impl.poonia.com.myapp.R;
 
 
 public class SubActivity extends ActionBarActivity {

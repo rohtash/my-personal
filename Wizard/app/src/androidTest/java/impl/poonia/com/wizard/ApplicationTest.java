@@ -1,4 +1,4 @@
-package impl.poonia.com.myapp;
+package impl.poonia.com.wizard;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

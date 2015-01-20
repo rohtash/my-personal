@@ -1,4 +1,4 @@
-package impl.poonia.com.myapp;
+package com.poonia.impl;
 
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPropertyAnimatorCompat;

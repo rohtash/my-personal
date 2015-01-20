@@ -1,4 +1,4 @@
-package impl.poonia.com.myapp;
+package com.poonia.impl;
 
 
 import android.content.Context;
@@ -18,6 +18,8 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import impl.poonia.com.myapp.R;
 
 
 public class NavigationDrawerFragment extends Fragment {

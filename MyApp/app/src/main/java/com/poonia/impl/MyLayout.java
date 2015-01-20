@@ -1,4 +1,4 @@
-package impl.poonia.com.myapp;
+package com.poonia.impl;
 
 import android.content.Context;
 import android.graphics.Canvas;
